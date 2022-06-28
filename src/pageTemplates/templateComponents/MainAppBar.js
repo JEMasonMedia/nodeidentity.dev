@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { styled, useTheme } from '@mui/material/styles'
+import { useState, useMemo, useEffect } from 'react'
+import { styled, useTheme, createTheme } from '@mui/material/styles'
 import MuiAppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
@@ -34,10 +34,10 @@ export default function MainAppBar({ open, handleDrawer }) {
       setMode('light')
     }
 
-    theme.palette.mode = mode
+    // theme.palette.mode = mode
   }
 
-  // const theme = useMemo(
+  // const newTheme = useMemo(
   //   () =>
   //     createTheme({
   //       palette: {
@@ -46,6 +46,12 @@ export default function MainAppBar({ open, handleDrawer }) {
   //     }),
   //   [mode]
   // );
+
+  // useEffect(() => {
+  //   return () => {
+  //     theme = newTheme
+  //   }
+  // }, [newTheme, theme])
 
   return (
     <AppBar sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}>
