@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { styled } from '@mui/material/styles'
 import MuiAppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
@@ -12,6 +12,7 @@ import Link from '../../misc/Link'
 import Image from 'next/image'
 import logoClear from '../../../assets/imgs/logoClear.png'
 
+import { useTheme } from '@mui/material/styles'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import { ThemeContext } from '../../themeContext/ThemeContext'
@@ -25,32 +26,26 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
 }))
 
 export default function MainAppBar({ open, handleDrawer }) {
-  // const theme = useTheme()
-  // const [mode, setMode] = useState('light')
+  const theme = useTheme()
+  const { darkMode, setDarkMode } = useContext(ThemeContext)
 
-  // console.log(theme.palette.mode)
-  // const handleMode = () => {
-  //   if (mode === 'light') {
-  //     setMode('dark')
-  //   } else {
-  //     setMode('light')
-  //   }
+  // useEffect(() => {
+  //   console.log(darkMode)
+  // }, [darkMode])
 
-  //   theme.palette.mode = mode
-  // }
-
-  // const newTheme = useMemo(
-  //   () =>
-  //     createTheme({
-  //       palette: {
-  //         type: mode,
-  //       }
-  //     }),
-  //   [mode]
-  // );
-
-  const ctx = useContext(ThemeContext)
-  const { darkMode, setDarkMode } = ctx
+  useEffect(() => {
+    const theme = localStorage.getItem('NI-theme')
+    if (theme) {
+      if (theme === 'dark') {
+        setDarkMode(true)
+      } else {
+        setDarkMode(false)
+      }
+    } else {
+      localStorage.setItem('NI-theme', 'light')
+      setDarkMode(true)
+    }
+  }, [])
 
   return (
     <AppBar sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}>
@@ -74,7 +69,10 @@ export default function MainAppBar({ open, handleDrawer }) {
         <IconButton
           color='inherit'
           aria-label='toggle light/dark mode'
-          onClick={() => setDarkMode(darkMode)}
+          onClick={() => {
+            // console.log(darkMode)
+            setDarkMode(!darkMode)
+          }}
           edge='start'
           sx={{
             marginRight: 5,

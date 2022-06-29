@@ -1,5 +1,4 @@
 import { createContext, useReducer } from 'react'
-
 import { ThemeProvider } from '@mui/material/styles'
 import Theme from '../misc/theme'
 
@@ -19,6 +18,7 @@ const reducer = (state, action) => {
       return state
   }
 }
+
 const initialState = {
   darkMode: false,
 }
@@ -32,6 +32,7 @@ export const ThemeContextProvider = ({ children }) => {
       payload: val,
     })
   }
+
   return (
     <ThemeContext.Provider value={{ darkMode: state.darkMode, setDarkMode }}>
       <ThemeProvider theme={state.darkMode ? Theme.dark : Theme.light}>{children}</ThemeProvider>

@@ -15,26 +15,26 @@ const clientSideEmotionCache = createEmotionCache()
 export default function MyApp(props) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
-  const ctx = useContext(ThemeContext)
-  const { darkMode, setDarkMode } = ctx
+  // const ctx = useContext(ThemeContext)
+  // const { darkMode, setDarkMode } = ctx
 
-  useEffect(() => {
-    console.log(darkMode)
-  }, [darkMode])
+  // useEffect(() => {
+  //   console.log(darkMode)
+  // }, [darkMode])
 
-  useEffect(() => {
-    const theme = localStorage.getItem('NI-theme')
-    if (theme) {
-      if (theme === 'dark') {
-        setDarkMode(true)
-      } else {
-        setDarkMode(false)
-      }
-    } else {
-      localStorage.setItem('NI-theme', 'light')
-      setDarkMode(true)
-    }
-  }, [darkMode, setDarkMode])
+  // useEffect(() => {
+  //   const theme = localStorage.getItem('NI-theme')
+  //   if (theme) {
+  //     if (theme === 'dark') {
+  //       setDarkMode(true)
+  //     } else {
+  //       setDarkMode(false)
+  //     }
+  //   } else {
+  //     localStorage.setItem('NI-theme', 'light')
+  //     setDarkMode(true)
+  //   }
+  // }, [darkMode, setDarkMode])
 
   return (
     <CacheProvider value={emotionCache}>
