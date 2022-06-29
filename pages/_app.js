@@ -34,7 +34,7 @@ export default function MyApp(props) {
       localStorage.setItem('NI-theme', 'light')
       setDarkMode(true)
     }
-  }, [])
+  }, [darkMode, setDarkMode])
 
   return (
     <CacheProvider value={emotionCache}>
