@@ -1,18 +1,20 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { styled, useTheme } from '@mui/material/styles'
 import MuiAppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
+import { Box } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
-import Link from '../../Link'
+import Link from '../../misc/Link'
 import Image from 'next/image'
-import logo from '../../../public/imgs/logo.png'
+import logoClear from '../../../assets/imgs/logoClear.png'
 
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
+import { ThemeContext } from '../../themeContext/ThemeContext'
 
 const AppBar = styled(MuiAppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
@@ -23,19 +25,19 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
 }))
 
 export default function MainAppBar({ open, handleDrawer }) {
-  const theme = useTheme()
-  const [mode, setMode] = useState('light')
+  // const theme = useTheme()
+  // const [mode, setMode] = useState('light')
 
   // console.log(theme.palette.mode)
-  const handleMode = () => {
-    if (mode === 'light') {
-      setMode('dark')
-    } else {
-      setMode('light')
-    }
+  // const handleMode = () => {
+  //   if (mode === 'light') {
+  //     setMode('dark')
+  //   } else {
+  //     setMode('light')
+  //   }
 
-    theme.palette.mode = mode
-  }
+  //   theme.palette.mode = mode
+  // }
 
   // const theme = useMemo(
   //   () =>
@@ -46,6 +48,9 @@ export default function MainAppBar({ open, handleDrawer }) {
   //     }),
   //   [mode]
   // );
+
+  const ctx = useContext(ThemeContext)
+  const { darkMode, setDarkMode } = ctx
 
   return (
     <AppBar sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}>
@@ -61,7 +66,7 @@ export default function MainAppBar({ open, handleDrawer }) {
           {open ? theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon /> : <MenuIcon />}
         </IconButton>
         <Link href='/' style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
-          <Image src={logo} alt='Node Identity Logo' width='40' height='40' />
+          <Image src={logoClear} alt='Node Identity Logo' width='40' height='40' />
           <Typography variant='h6' noWrap component='div' style={{ marginLeft: '10px' }}>
             Node Identity
           </Typography>
@@ -69,12 +74,12 @@ export default function MainAppBar({ open, handleDrawer }) {
         <IconButton
           color='inherit'
           aria-label='toggle light/dark mode'
-          onClick={handleMode}
+          onClick={() => setDarkMode(darkMode)}
           edge='start'
           sx={{
             marginRight: 5,
           }}>
-          {theme.palette.mode === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
+          <Box style={{ flexGrow: '1' }}>{darkMode ? <DarkModeIcon /> : <LightModeIcon />}</Box>
         </IconButton>
       </Toolbar>
     </AppBar>
