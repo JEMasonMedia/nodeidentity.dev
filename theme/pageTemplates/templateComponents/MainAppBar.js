@@ -1,10 +1,5 @@
-<<<<<<< HEAD:theme/pageTemplates/templateComponents/MainAppBar.js
-import { useState, useContext } from 'react'
-import { styled, useTheme } from '@mui/material/styles'
-=======
-import { useState, useMemo, useEffect } from 'react'
-import { styled, useTheme, createTheme } from '@mui/material/styles'
->>>>>>> 43faa4df230124f778e57cb16cf8a8f818d9034b:src/pageTemplates/templateComponents/MainAppBar.js
+import { useContext } from 'react'
+import { styled } from '@mui/material/styles'
 import MuiAppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
@@ -41,13 +36,8 @@ export default function MainAppBar({ open, handleDrawer }) {
   //     setMode('light')
   //   }
 
-<<<<<<< HEAD:theme/pageTemplates/templateComponents/MainAppBar.js
   //   theme.palette.mode = mode
   // }
-=======
-    // theme.palette.mode = mode
-  }
->>>>>>> 43faa4df230124f778e57cb16cf8a8f818d9034b:src/pageTemplates/templateComponents/MainAppBar.js
 
   // const newTheme = useMemo(
   //   () =>
@@ -59,16 +49,8 @@ export default function MainAppBar({ open, handleDrawer }) {
   //   [mode]
   // );
 
-<<<<<<< HEAD:theme/pageTemplates/templateComponents/MainAppBar.js
   const ctx = useContext(ThemeContext)
   const { darkMode, setDarkMode } = ctx
-=======
-  // useEffect(() => {
-  //   return () => {
-  //     theme = newTheme
-  //   }
-  // }, [newTheme, theme])
->>>>>>> 43faa4df230124f778e57cb16cf8a8f818d9034b:src/pageTemplates/templateComponents/MainAppBar.js
 
   return (
     <AppBar sx={{ zIndex: theme => theme.zIndex.drawer + 1 }}>
