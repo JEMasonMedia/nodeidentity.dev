@@ -5,13 +5,13 @@ import ThemeUpdater from '../src/components/ThemeUpdater'
 const Home = () => {
   return (
     <main
-      css={css`
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      `}>
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '100vh',
+      }}>
       <PageTitle />
       <ThemeUpdater />
     </main>
