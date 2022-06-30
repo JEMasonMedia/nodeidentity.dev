@@ -12,10 +12,11 @@ import Link from '../../misc/Link'
 import Image from 'next/image'
 import logoClear from '../../../assets/imgs/logoClear.png'
 
-import { useTheme } from '@mui/material/styles'
+// import { useTheme } from '@mui/material/styles'
+import { useTheme } from 'next-themes'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
-import { ThemeContext } from '../../themeContext/ThemeContext'
+import { ThemeContext } from '../../../src/themeContext/ThemeContext'
 
 const AppBar = styled(MuiAppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
@@ -26,7 +27,7 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
 }))
 
 export default function MainAppBar({ open, handleDrawer }) {
-  const theme = useTheme()
+  const { theme, resolvedTheme, setTheme } = useTheme()
   const { darkMode, setDarkMode } = useContext(ThemeContext)
 
   // useEffect(() => {
@@ -71,7 +72,7 @@ export default function MainAppBar({ open, handleDrawer }) {
           aria-label='toggle light/dark mode'
           onClick={() => {
             // console.log(darkMode)
-            setDarkMode(!darkMode)
+            setTheme(!darkMode)
           }}
           edge='start'
           sx={{
