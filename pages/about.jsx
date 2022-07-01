@@ -1,12 +1,8 @@
-import * as React from 'react'
-import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
-import ProTip from '../components/misc/ProTip'
-import Link from '../theme/misc/Link'
-
-import HeadComponent from '../components/misc/HeadComponent'
+import Link from '../src/components/helpers/Link'
+import HeadComponent from '../src/components/misc/HeadComponent'
+import ProTip from '../src/components/misc/ProTip'
 
 export default function About() {
   const metaContent = {
