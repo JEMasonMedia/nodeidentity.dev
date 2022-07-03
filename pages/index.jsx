@@ -18,6 +18,12 @@ const Home = () => {
         <Typography variant='h4' noWrap component='div' style={{ marginTop: '1em' }}>
           Node Identity
         </Typography>
+        <Typography variant='h6' noWrap component='div' style={{ marginTop: '1em' }}>
+          A do it yourself identity and database management system
+        </Typography>
+        <Typography variant='caption text' noWrap component='div' style={{ marginTop: '1em' }}>
+          (under development)
+        </Typography>
 
         {/* <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: '1em', padding: '1em' }}> */}
         <Grid container spacing={4} sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: '1em' }}>
