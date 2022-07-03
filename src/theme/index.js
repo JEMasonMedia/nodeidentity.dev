@@ -1,23 +1,22 @@
 import { createTheme } from '@mui/material/styles'
+// import LightTheme from './LightTheme'
+// import DarkTheme from './DarkTheme'
 
 export const DEFAULT_THEME = 'dark'
 
 const theme = {
-  primary: { main: '#272ab0' },
-  secondary: { main: '#9c27b0' },
-  error: { main: '#E92C2C' },
-  warning: { main: '#f98600' },
-  info: { main: '#57acdc' },
-  success: { main: '#60c689' },
+  primary: { main: '#2820B2' }, //
+  secondary: { main: '#7020b2' },
+  warning: { main: '#b220ab' }, //
+  error: { main: '#b22720' }, //
+  info: { main: '#266E6E' },
+  success: { main: '#339333' },
   contrastThreshold: 3,
   tonalOffset: 0.2,
 }
 
 export const lightTheme = createTheme({
   palette: {
-    // primary: { main: '#9147FF' },
-    // secondary: { main: '#2a48f3' },
-    // error: { main: '#E91E63' },
     ...theme,
     mode: 'light',
   },
@@ -25,9 +24,6 @@ export const lightTheme = createTheme({
 
 export const darkTheme = createTheme({
   palette: {
-    // primary: { main: '#9147FF' },
-    // secondary: { main: '#2a48f3' },
-    // error: { main: '#E91E63' },
     ...theme,
     mode: 'dark',
   },

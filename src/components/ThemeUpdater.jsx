@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import { Button, MenuItem, Select, Typography } from '@mui/material'
 import { useTheme } from 'next-themes'
 import LightModeIcon from '@mui/icons-material/LightMode'
@@ -6,18 +6,18 @@ import DarkModeIcon from '@mui/icons-material/DarkMode'
 
 const ThemeUpdater = () => {
   const { theme, resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  // const [mounted, setMounted] = useState(false)
 
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), [])
+  // // When mounted on client, now we can show the UI
+  // useEffect(() => setMounted(true), [])
 
-  if (!mounted)
-    return (
-      <div
-        style={{
-          minHeight: '162.38px',
-        }}></div>
-    )
+  // if (!mounted)
+  //   return (
+  //     <div
+  //       style={{
+  //         minHeight: '162.38px',
+  //       }}></div>
+  //   )
 
   return (
     <div

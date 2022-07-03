@@ -11,7 +11,7 @@ export default function DefaultPageScaffold({ children, mainAppBarLinks, mainApp
     <>
       <MainAppBar open={open} handleDrawer={handleDrawer} mainAppBarLinks={mainAppBarLinks} />
       <MainAppDrawer open={open} mainAppDrawerLinks={mainAppDrawerLinks} />
-      <Box sx={{ paddingLeft: '4.5em', paddingRight: '.4em' }}>{children}</Box>
+      <Box sx={{}}>{children}</Box>
     </>
   )
 }

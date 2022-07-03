@@ -14,7 +14,9 @@ import DarkModeIcon from '@mui/icons-material/DarkMode'
 
 import Link from './Link'
 import Image from 'next/image'
-import logoClear from '../../assets/imgs/logoClear.png'
+// import logoClear from '../../assets/imgs/logoClear.png'
+// import logoClear from '../../../public/imgs/logoClear.png'
+import Logo from '../../assets/svg/Logo'
 
 const AppBar = styled(MuiAppBar)(({ theme }) => ({
   zIndex: theme.zIndex.drawer + 1,
@@ -26,29 +28,17 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
 
 export default function MainAppBar({ open, handleDrawer }) {
   const { theme, resolvedTheme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
-
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), [])
-
-  if (!mounted)
-    return (
-      <div
-        style={{
-          minHeight: '162.38px',
-        }}></div>
-    )
 
   return (
-    <AppBar>
-      <Toolbar>
+    <AppBar elevation={0}>
+      <Box sx={{ padding: '.75em 1.5em .75em 1.5em', backgroundColor: 'inherit', borderBottom: 1, borderColor: 'grey.900' }}>
         <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row' }}>
           <IconButton color='inherit' aria-label='open drawer' onClick={handleDrawer} edge='start' sx={{ marginRight: 5 }}>
             {open ? theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon /> : <MenuIcon />}
           </IconButton>
 
           <Link href='/' style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
-            <Image src={logoClear} alt='Node Identity Logo' width='40' height='40' />
+            <Logo fill='currentColor' fontSize='170' width='40' height='40' />
             <Typography variant='h6' noWrap component='div' style={{ marginLeft: '10px' }}>
               Node Identity
             </Typography>
@@ -60,7 +50,8 @@ export default function MainAppBar({ open, handleDrawer }) {
             </IconButton>
           </Box>
         </Box>
-      </Toolbar>
+      </Box>
     </AppBar>
   )
 }
+//, borderBottom: 'red solid 1px'

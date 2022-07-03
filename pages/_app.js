@@ -1,10 +1,26 @@
+import { useState, useEffect } from 'react'
 import createEmotionCache from '../src/theme/createEmotionCache'
 import PageProvider from '../src/components/helpers/PageProvider'
+
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
 // import '../holding/misc/global.css'
 
 export default function App({ Component, emotionCache = clientSideEmotionCache, pageProps }) {
+  const [mounted, setMounted] = useState(false)
+  // When mounted on client, now we can show the UI
+  useEffect(() => setMounted(true), [])
+
+  if (!mounted)
+    return (
+      <div
+        style={{
+          // minHeight: '162.38px',
+          minHeight: '100vh',
+          // backgroundColor: 'black',
+        }}></div>
+    )
+
   return (
     <PageProvider emotionCache={emotionCache}>
       <Component {...pageProps} />
