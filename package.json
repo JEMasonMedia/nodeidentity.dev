@@ -17,9 +17,11 @@
     "@mui/material": "latest",
     "next": "latest",
     "next-themes": "latest",
+    "nodemailer": "latest",
     "prop-types": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "axios": "latest"
   },
   "devDependencies": {
     "eslint": "8.18.0",
