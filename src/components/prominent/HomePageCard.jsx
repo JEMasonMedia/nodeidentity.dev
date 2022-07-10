@@ -21,7 +21,7 @@ export default function ImgMediaCard({ image, title, description, links }) {
       </CardContent>
       <CardActions>
         {links.map(({ text, link }, index) => (
-          <Button key={`${id}-${index}`} size='small' href={link}>
+          <Button key={`${id}-${index}`} size='small' color='inherit' href={link}>
             {text}
           </Button>
         ))}

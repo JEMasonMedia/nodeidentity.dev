@@ -1,11 +1,11 @@
-import { Box, Container, Paper, Grid } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import Link from '../helpers/Link'
-import Logo from '../../assets/svg/Logo'
-import Copyright from './CopyRight'
-import ContactMailerButton from './ContactMailerButton'
+import Copyright from '../misc/CopyRight'
+import ContactMailerButton from '../misc/ContactMailerButton'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import LightbulbIcon from '@mui/icons-material/Lightbulb'
+import BrandLink from './BrandLink'
 
 export default function Footer() {
   return (
@@ -31,12 +31,7 @@ export default function Footer() {
         }}>
         <Grid item lg={3} xs={12} sm={12}>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <Link href='/' style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
-              <Logo fill='currentColor' fontSize='170' width='40' height='40' />
-              <Typography variant='h6' component='div' style={{ marginLeft: '10px', fontFamily: 'Cinzel' }}>
-                Node Identity
-              </Typography>
-            </Link>
+            <BrandLink />
             <Link href='/about' style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
               <Typography variant='body2' color='text.secondary' align='center' component='div' style={{ display: 'flex', alignItems: 'center', padding: '0.5em' }}>
                 <LightbulbIcon sx={{ marginRight: '0.5em' }} />
@@ -52,7 +47,36 @@ export default function Footer() {
             <ContactMailerButton />
           </Box>
         </Grid>
-        <Grid item lg={3} xs={12} sm={12}></Grid>
+        <Grid item lg={3} xs={12} sm={12}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+              <GitHubIcon sx={{ marginRight: '0.5em' }} />
+              <Typography variant='body2' color='text.secondary' align='center' component='div' style={{}}>
+                Source on GitHub (under active development)
+              </Typography>
+            </Box>
+            <Link href='https://github.com/JEMasonMedia/nodeidentity.dev' target='_blank' style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+              <Typography variant='body2' color='text.secondary' align='center' component='div' style={{ display: 'flex', alignItems: 'center', padding: '0.5em' }}>
+                This Website
+              </Typography>
+            </Link>
+            <Link href='https://github.com/JEMasonMedia/Node-Identity' target='_blank' style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+              <Typography variant='body2' color='text.secondary' align='center' component='div' style={{ display: 'flex', alignItems: 'center', padding: '0.5em' }}>
+                Node Identity
+              </Typography>
+            </Link>
+            <Link href='https://github.com/JEMasonMedia/Node-Identity-DB' target='_blank' style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+              <Typography variant='body2' color='text.secondary' align='center' component='div' style={{ display: 'flex', alignItems: 'center', padding: '0.5em' }}>
+                Node Identity DB
+              </Typography>
+            </Link>
+            <Link href='#' target='_blank' style={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+              <Typography variant='body2' color='text.secondary' align='center' component='div' style={{ display: 'flex', alignItems: 'center', padding: '0.5em' }}>
+                NI Component Library (project not started)
+              </Typography>
+            </Link>
+          </Box>
+        </Grid>
         <Grid item lg={3} xs={12} sm={12}>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
             <Copyright />

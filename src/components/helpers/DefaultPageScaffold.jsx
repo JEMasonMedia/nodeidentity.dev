@@ -1,8 +1,8 @@
 import { Box } from '@mui/material'
 import { useState } from 'react'
-import MainAppBar from './MainAppBar'
-import MainAppDrawer from './MainAppDrawer'
-import Footer from '../misc/Footer'
+import MainAppBar from '../prominent/MainAppBar'
+import MainAppDrawer from '../ancillary/MainAppDrawer'
+import Footer from '../prominent/Footer'
 
 export default function DefaultPageScaffold({ children, mainAppBarLinks, mainAppDrawerLinks }) {
   const [open, setDrawerOpen] = useState(false)
