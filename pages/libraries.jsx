@@ -1,8 +1,5 @@
 import { Box, Container, Paper, Grid } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import Chip from '@mui/material/Chip'
-import Link from '@/components/helpers/Link'
 import HeadComponent from '@/components/misc/HeadComponent'
 import NoDrawerPageScaffold from '@/components/helpers/NoDrawerPageScaffold'
 
