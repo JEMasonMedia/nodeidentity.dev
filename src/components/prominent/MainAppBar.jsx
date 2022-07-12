@@ -17,10 +17,20 @@ const AppBar = styled(MuiAppBar)(({ theme }) => ({
   }),
 }))
 
+const AppBarBox = styled(Box)(() => ({
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'row',
+  padding: '.75em 1.5em .75em 1.5em',
+  backgroundColor: 'inherit',
+  borderBottom: 1,
+  borderColor: 'grey.900',
+}))
+
 export default function MainAppBar({ showMenu, open, handleDrawer }) {
   return (
     <AppBar elevation={0}>
-      <Box sx={{ width: '100%', display: 'flex', flexDirection: 'row', padding: '.75em 1.5em .75em 1.5em', backgroundColor: 'inherit', borderBottom: 1, borderColor: 'grey.900' }}>
+      <AppBarBox>
         {showMenu && (
           <IconButton color='inherit' aria-label='open primary drawer' onClick={handleDrawer} edge='start' sx={{ marginRight: 5 }}>
             {open ? theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon /> : <MenuIcon />}
@@ -29,7 +39,7 @@ export default function MainAppBar({ showMenu, open, handleDrawer }) {
         <BrandLink color='inherit' />
         <AppBarMenu />
         <ThemeSwitcher />
-      </Box>
+      </AppBarBox>
     </AppBar>
   )
 }
