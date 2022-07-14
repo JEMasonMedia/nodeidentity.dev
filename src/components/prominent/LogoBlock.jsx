@@ -80,31 +80,3 @@ export default function LogoBlock() {
     </Box>
   )
 }
-
-{
-  /* <GridItem lg={2} xs={12} sm={6}>
-<MuiLink color='inherit' href='/' style={{ textDecoration: 'none' }}>
-  <Logo fill='currentColor' fontSize='170' width='120' height='120' />
-</MuiLink>
-</GridItem>
-<GridItem lg={2} xs={12} sm={6}>
-<MuiLink target='_blank' color='inherit' href='https://nodejs.org/' style={{ textDecoration: 'none' }}>
-  <NodeLogo width='120' height='120' />
-</MuiLink>
-</GridItem>
-<GridItem lg={2} xs={12} sm={6}>
-<MuiLink target='_blank' color='inherit' href='https://nextjs.org/' style={{ textDecoration: 'none' }}>
-  <NextIcon width='140' height='120' />
-</MuiLink>
-</GridItem>
-<GridItem lg={2} xs={12} sm={6}>
-<MuiLink target='_blank' color='inherit' href='https://reactjs.org/' style={{ textDecoration: 'none' }}>
-  <ReactLogo width='100' height='100' />
-</MuiLink>
-</GridItem>
-<GridItem lg={2} xs={12} sm={6}>
-<MuiLink target='_blank' color='inherit' href='https://mui.com/' style={{ textDecoration: 'none' }}>
-  <MUIIcon width='100' height='100' />
-</MuiLink>
-</GridItem> */
-}

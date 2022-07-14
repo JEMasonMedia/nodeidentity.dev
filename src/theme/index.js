@@ -36,7 +36,7 @@ export const darkTheme = responsiveFontSizes(
 export const globalStyles = `
   :root {
     body {
-      background-color: #fff;
+      background-color: #F5F5F5;
       color: #121212;
     }
   }

@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles'
 import MuiAppBar from '@mui/material/AppBar'
 import IconButton from '@mui/material/IconButton'
-import { Box } from '@mui/material'
+import { Box, Toolbar } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
@@ -23,14 +23,12 @@ const AppBarBox = styled(Box)(() => ({
   flexDirection: 'row',
   padding: '.75em 1.5em .75em 1.5em',
   backgroundColor: 'inherit',
-  borderBottom: 1,
-  borderColor: 'grey.900',
 }))
 
 export default function MainAppBar({ showMenu, open, handleDrawer }) {
   return (
     <AppBar elevation={0}>
-      <AppBarBox>
+      <AppBarBox border={1} borderTop={0} borderLeft={0} borderRight={0} borderColor='grey.900'>
         {showMenu && (
           <IconButton color='inherit' aria-label='open primary drawer' onClick={handleDrawer} edge='start' sx={{ marginRight: 5 }}>
             {open ? theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon /> : <MenuIcon />}

@@ -1,13 +1,7 @@
 import { forwardRef, useState } from 'react'
 import useMediaQuery from '@mui/material/useMediaQuery'
-import Typography from '@mui/material/Typography'
 import { Box } from '@mui/material'
-import Link from '../helpers/Link'
-import Button from '@mui/material/Button'
 import Dialog from '@mui/material/Dialog'
-import ListItemText from '@mui/material/ListItemText'
-import ListItem from '@mui/material/ListItem'
-import List from '@mui/material/List'
 import Divider from '@mui/material/Divider'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
@@ -15,14 +9,23 @@ import IconButton from '@mui/material/IconButton'
 import CloseIcon from '@mui/icons-material/Close'
 import Slide from '@mui/material/Slide'
 import MenuIcon from '@mui/icons-material/Menu'
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
-import ChevronRightIcon from '@mui/icons-material/ChevronRight'
-import AppBarLink from './AppBarLink'
 import BrandLink from './BrandLink'
+import Typography from '@mui/material/Typography'
+import Link from '../helpers/Link'
 
 const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction='down' ref={ref} {...props} />
 })
+
+const AppBarLink = ({ to, text, sx }) => {
+  return (
+    <Link href={to} sx={{ textDecoration: 'none', color: 'inherit', display: 'flex', alignItems: 'center' }}>
+      <Typography variant='body1' noWrap component='div' style={{ marginLeft: '10px', fontFamily: 'Cinzel', fontSize: sx.fontSize, color: 'inherit', fontWeight: '600' }}>
+        {text}
+      </Typography>
+    </Link>
+  )
+}
 
 const AppBarMenuContent = ({ orientation }) => {
   const sx = {

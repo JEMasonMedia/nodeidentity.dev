@@ -25,7 +25,6 @@ export default function ThemeSwitcher() {
       <Head>
         <link rel='shortcut icon' id='favicon' href={`/favicon-${isSystemDarkTheme ? 'light' : 'dark'}.ico`} />
       </Head>
-
       <IconButton color='inherit' aria-label='toggle light/dark mode' onClick={() => setTheme(resolvedTheme === 'light' ? 'dark' : 'light')} edge='start'>
         {resolvedTheme === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
       </IconButton>

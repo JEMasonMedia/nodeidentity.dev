@@ -4,3 +4,9 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+module.exports = {
+  env: {
+    NEXT_PUBLIC_BANNER_VIDEO_PATH: 'https://freethecube.com/hiddenfornow/Explosion-Small.mp4',
+  },
+}
