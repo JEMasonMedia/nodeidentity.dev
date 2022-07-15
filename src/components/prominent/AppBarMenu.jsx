@@ -57,7 +57,7 @@ const AppBarMenuContent = ({ orientation }) => {
         <AppBarLink to='/libraries' text='Libraries' sx={sx.link} />
         <AppBarLink to='/about' text='About' sx={sx.link} />
         <AppBarLink to='/documentation' text='Documentation' sx={sx.link} />
-        <AppBarLink to='/forum' text='Forum' sx={sx.link} />
+        <AppBarLink to='/community' text='Community' sx={sx.link} />
       </Box>
       {sx.link.fontSize && <Divider sx={{ marginTop: '20px', marginBottom: '20px' }} />}
       <Box sx={sx.right}>

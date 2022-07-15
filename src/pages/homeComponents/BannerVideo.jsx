@@ -1,4 +1,4 @@
-import BetterRandom from '@/utils/BetterRandom'
+// import BetterRandom from '@/utils/BetterRandom'
 
 const videoStyles = {
   position: 'absolute',
@@ -12,7 +12,7 @@ const videoStyles = {
 // const videos = ['Abstract', 'Explosion', 'Matrix', 'Network']
 // const path = process.env.NEXT_PUBLIC_BANNER_VIDEO_PATH
 
-export default function BannerVideo({ video }) {
+export default function BannerVideo({ bannerVideo }) {
   // const [isShown, setIsShown] = useState(false)
   // const videoRef = useRef(null)
   // const [video, setVideo] = useState(`/video/${videos[BetterRandom(0, videos.length - 1)]}-Small.mp4`)
@@ -38,7 +38,7 @@ export default function BannerVideo({ video }) {
 
   return (
     <video autoPlay muted style={videoStyles}>
-      <source src={video} type='video/mp4' />
+      <source src={bannerVideo} type='video/mp4' />
     </video>
   )
 }

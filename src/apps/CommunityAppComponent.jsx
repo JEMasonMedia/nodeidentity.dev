@@ -1,15 +1,12 @@
 import { Box, Container, Paper, Grid } from '@mui/material'
 import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import Chip from '@mui/material/Chip'
-import Link from '@/components/helpers/Link'
-import HeadComponent from '@/components/misc/HeadComponent'
+import HeadComponent from '@/components/ancillary/HeadComponent'
 import NoDrawerPageScaffold from '@/components/helpers/NoDrawerPageScaffold'
 
-export default function Libraries() {
+export default function CommunityAppComponent() {
   const metaContent = {
     name: 'description',
-    content: 'Forum of Node Identity',
+    content: 'Community of Node Identity',
   }
 
   return (
@@ -18,11 +15,10 @@ export default function Libraries() {
         <HeadComponent title='Forum' metaContent={metaContent} />
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginTop: '2.5em', height: '550px' }}>
           <Typography variant='h4' component='h1' gutterBottom>
-            Forum of Node Identity
+            Community Forum of Node Identity
           </Typography>
-
           <Typography variant='body1' component='p' gutterBottom>
-            This is the Forum of the Node Identity project. It is a work in progress and is not yet complete.
+            This is the Community Forum of the Node Identity project. It is a work in progress and is not yet complete.
           </Typography>
         </Box>
       </Container>

@@ -1,6 +1,6 @@
 import { styled } from '@mui/material/styles'
 import { Grid } from '@mui/material'
-import HomePageCard from '@/components/prominent/HomePageCard'
+import HomePageCard from './HomePageCard'
 
 const GridContainer = styled(Grid)(() => ({
   display: 'flex',

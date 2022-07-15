@@ -1,6 +1,6 @@
 import { Box, Paper, Grid } from '@mui/material'
 import { styled } from '@mui/material/styles'
-import MuiLink from '@mui/material/Link'
+import Link from '@/components/helpers/Link'
 import Logo from '@/assets/svg/Logo'
 import NodeLogo from '@/assets/svg/NodeLogo'
 import ReactLogo from '@/assets/svg/ReactLogo'
@@ -32,9 +32,9 @@ const GridItem = styled(Grid)(() => genericStyles)
 const GridItems = ({ href, logo }) => {
   return (
     <GridItem item lg={2} sm={6} xs={12}>
-      <MuiLink color='inherit' href={href}>
+      <Link color='inherit' href={href} target={href !== '/' ? '_blank' : ''}>
         {logo}
-      </MuiLink>
+      </Link>
     </GridItem>
   )
 }

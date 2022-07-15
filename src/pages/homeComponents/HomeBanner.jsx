@@ -1,7 +1,7 @@
 import { Paper } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import BannerVideo from '@/components/prominent/BannerVideo'
+import BannerVideo from './BannerVideo'
 
 const HomeBannerPaper = styled(Paper)(() => ({
   height: '25em',
@@ -17,7 +17,7 @@ const HomeBannerPaper = styled(Paper)(() => ({
   position: 'relative',
 }))
 
-export default function HomeBanner({ video }) {
+export default function HomeBanner({ bannerVideo }) {
   return (
     <HomeBannerPaper elevation={1}>
       <Typography variant='h1' component='div' style={{ fontFamily: 'Cinzel', zIndex: '1' }}>
@@ -29,7 +29,7 @@ export default function HomeBanner({ video }) {
       <Typography variant='caption text' component='div' style={{ marginTop: '1em', zIndex: '1' }}>
         (under development)
       </Typography>
-      <BannerVideo video={video} />
+      <BannerVideo bannerVideo={bannerVideo} />
     </HomeBannerPaper>
   )
 }
