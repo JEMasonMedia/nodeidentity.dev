@@ -1,4 +1,3 @@
-import { useId } from 'react'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
@@ -7,7 +6,6 @@ import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 
 export default function ImgMediaCard({ image, title, description, links }) {
-  const id = useId()
   return (
     <Card sx={{ maxWidth: 500 }}>
       <CardMedia component='img' height='200' image={image} alt={title} />
@@ -21,7 +19,7 @@ export default function ImgMediaCard({ image, title, description, links }) {
       </CardContent>
       <CardActions>
         {links.map(({ text, link }, index) => (
-          <Button key={`${id}-${index}`} size='small' color='inherit' href={link}>
+          <Button key={index} size='small' color='inherit' href={link}>
             {text}
           </Button>
         ))}

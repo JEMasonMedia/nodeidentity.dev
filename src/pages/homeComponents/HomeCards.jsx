@@ -16,11 +16,11 @@ export default function HomeCards() {
       <Grid item lg={4} md={4} xs={12} sm={6}>
         <HomePageCard
           image='/img/homePage/programmer.jpg'
-          title='Node Identity Library'
+          title='Node Identity Auth'
           description='A plug and play authentication and authorization library for the Node.js environment. Set it up in seconds and start using it.'
           links={[
             { text: 'Share', link: '#' },
-            { text: 'Learn More', link: '#' },
+            { text: 'Learn More', link: '/libraries?tab=0' },
           ]}
         />
       </Grid>
@@ -32,7 +32,7 @@ export default function HomeCards() {
           One Modal Many Databases.'
           links={[
             { text: 'Share', link: '#' },
-            { text: 'Learn More', link: '#' },
+            { text: 'Learn More', link: '/libraries?tab=1' },
           ]}
         />
       </Grid>
@@ -43,7 +43,7 @@ export default function HomeCards() {
           description='Continuing plug and play, a full stack of components for React Next.js and more.'
           links={[
             { text: 'Share', link: '#' },
-            { text: 'Learn More', link: '#' },
+            { text: 'Learn More', link: '/libraries?tab=2' },
           ]}
         />
       </Grid>

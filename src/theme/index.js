@@ -5,12 +5,12 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles'
 export const DEFAULT_THEME = 'dark'
 
 const theme = {
-  primary: { main: '#2820B2' }, //
-  secondary: { main: '#7020b2' },
-  warning: { main: '#b220ab' }, //
-  error: { main: '#b22720' }, //
+  primary: { main: '#2820B2' },
+  secondary: { main: '#339333' },
+  warning: { main: '#b220ab' },
+  error: { main: '#b22720' },
   info: { main: '#266E6E' },
-  success: { main: '#339333' },
+  success: { main: '#7020b2' },
   contrastThreshold: 3,
   tonalOffset: 0.2,
 }

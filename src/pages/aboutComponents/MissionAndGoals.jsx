@@ -10,7 +10,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 
 const rows = [
-  { name: 'Node Identity', description: 'Full Stack Authentication and Authorization Library for Node, Express, React, Next, Vue, and more' },
+  { name: 'Node Identity Auth', description: 'Full Stack Authentication and Authorization Library for Node, Express, React, Next, Vue, and more' },
   { name: 'Node Identity DB', description: 'A One Modal Many databases Connection and Translation framework matrix and UI' },
   { name: 'NI Component Library', description: 'UI Components for Full Page User Profile, Administration, Authentication, and Authorization' },
   { name: 'Future Services', description: 'Various Hosting Options, Full Stack Engineering, and Templates' },
@@ -18,13 +18,13 @@ const rows = [
 
 export default function MissionAndGoals({ padding }) {
   return (
-    <Paper sx={{ padding }} elevation={3}>
+    <Paper sx={{ padding }} elevation={2}>
       <TitleBox marginBottom border={1} borderTop={0} borderLeft={0} borderRight={0} borderColor='grey.600'>
         <Typography variant='h5' component='h1' gutterBottom>
           Mission &amp; Goals
         </Typography>
       </TitleBox>
-      <Paper sx={{ padding: '1em 5% 1em 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%', marginTop: '1em' }}>
+      <Paper sx={{ backgroundColor: 'inherit', padding: '1em 5% 1em 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%', marginTop: '1em' }}>
         <Typography variant='h5' component='p' gutterBottom>
           Mission
         </Typography>

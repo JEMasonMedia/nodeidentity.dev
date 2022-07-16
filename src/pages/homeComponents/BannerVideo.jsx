@@ -1,3 +1,4 @@
+import ReactPlayer from 'react-player/lazy'
 // import BetterRandom from '@/utils/BetterRandom'
 
 const videoStyles = {

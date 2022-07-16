@@ -1,4 +1,4 @@
-import { Box, Container, Paper, Grid } from '@mui/material'
+import { Container, Paper, Grid } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import HeadComponent from '@/components/ancillary/HeadComponent'
@@ -12,12 +12,13 @@ import Education from './aboutComponents/Education'
 import History from './aboutComponents/History'
 
 export default function AboutPageComponent() {
-  const matches = useMediaQuery('(max-width:899px)')
-  const padding = { padding: matches ? '1em' : '2em' }
   const metaContent = {
     name: 'description',
     content: 'About Node Identity',
   }
+
+  const matches = useMediaQuery('(max-width:899px)')
+  const padding = { padding: matches ? '1em' : '2em' }
 
   return (
     <NoDrawerPageScaffold>

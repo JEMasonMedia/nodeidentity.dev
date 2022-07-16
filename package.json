@@ -22,10 +22,11 @@
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-player": "^2.10.1"
+    "react-player": "latest",
+    "react-router-dom": "latest"
   },
   "devDependencies": {
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6"
+    "eslint": "latest",
+    "eslint-config-next": "latest"
   }
 }

@@ -23,7 +23,7 @@ const certification = [
 
 export default function Education({ padding }) {
   return (
-    <Paper sx={{ display: 'flex', flexDirection: 'column', height: '100%', padding, textAlign: 'center' }} elevation={3}>
+    <Paper sx={{ display: 'flex', flexDirection: 'column', height: '100%', padding, textAlign: 'center' }} elevation={2}>
       <TitleBox marginBottom border={1} borderTop={0} borderLeft={0} borderRight={0} borderColor='grey.600'>
         <Typography variant='h5' component='h1' gutterBottom>
           Education &amp; Certifications
@@ -41,13 +41,6 @@ export default function Education({ padding }) {
                 <TableCell align='left'>{education.degree}</TableCell>
               </TableRow>
             ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <br />
-      <TableContainer component={Paper}>
-        <Table size='small' aria-label='a dense table'>
-          <TableBody>
             {certification.map((certification, index) => (
               <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                 <TableCell component='th' scope='row'>

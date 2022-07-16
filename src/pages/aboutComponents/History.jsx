@@ -15,35 +15,38 @@ const history = [
 
 export default function History({ padding }) {
   return (
-    <Paper sx={{ display: 'flex', flexDirection: 'column', height: '100%', padding, textAlign: 'center' }} elevation={3}>
+    <Paper sx={{ display: 'flex', flexDirection: 'column', height: '100%', padding, textAlign: 'center' }} elevation={2}>
       <TitleBox marginBottom border={1} borderTop={0} borderLeft={0} borderRight={0} borderColor='grey.600'>
         <Typography variant='h5' component='h1' gutterBottom>
           History &amp; Experience
         </Typography>
       </TitleBox>
-      <Typography variant='h5' component='h1' gutterBottom>
-        Titles Held
-      </Typography>
-      <Box>
-        <TableContainer component={Paper}>
-          <Table size='small' aria-label='a dense table'>
-            <TableBody>
-              {history.map((history, index) => (
-                <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                  <TableCell component='th' scope='row'>
-                    {history.dates}
-                  </TableCell>
-                  <TableCell align='left'>{history.titles}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Box>
-      <Typography variant='h5' component='h1' gutterBottom sx={{ marginTop: '1em' }}>
-        Personal Statement
-      </Typography>
-      <Paper sx={{ padding: '1em', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%' }}>
+      <Paper sx={{ backgroundColor: 'inherit', padding: '1em 5% 1em 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', textAlign: 'center', height: '100%', marginTop: '1em' }}>
+        <Typography variant='h5' component='h1' gutterBottom>
+          Titles Held
+        </Typography>
+        <Box>
+          <TableContainer component={Paper}>
+            <Table size='small' aria-label='a dense table'>
+              <TableBody>
+                {history.map((history, index) => (
+                  <TableRow key={index} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                    <TableCell component='th' scope='row'>
+                      {history.dates}
+                    </TableCell>
+                    <TableCell align='left'>{history.titles}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Box>
+      </Paper>
+      <Paper sx={{ padding: '1em 5% 1em 5%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%', marginTop: '1em' }}>
+        <Typography variant='h5' component='h1' gutterBottom>
+          Personal Statement
+        </Typography>
+
         <Typography variant='body1' component='h1' gutterBottom>
           As you can see, I am a man that has worn many hats. Even this list doesn&apos;t hold them all. I have done what was necessary to take care of my family given the circumstances faced on the day. My son is nearly grown and I can now focus more on the passion for software engineering that started when I was coding a TI-81 calculator in high school in 1995. My dream is here, now, and I will make it amazing. I hope that many join me in this endeavour so that I may plant a tree that may cast shade for generations.
         </Typography>
